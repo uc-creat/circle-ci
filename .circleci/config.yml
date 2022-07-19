@@ -19,6 +19,8 @@ jobs:
       - store_artifacts:
           path: build/reports/jacoco
           destination: test_coverage
+      - sonarcloud/scan
+
 
   test:
     docker:
@@ -26,11 +28,14 @@ jobs:
     steps:
       - checkout
       - run: ./gradlew test
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.1.0
 
 workflows:
   build_and_test:
     jobs:
-      - build
+      - build:
+          - context: sonarcloud
       - test:
           requires:
             - build
