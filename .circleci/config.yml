@@ -26,3 +26,11 @@ jobs:
     steps:
       - checkout
       - run: ./gradlew test
+
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
