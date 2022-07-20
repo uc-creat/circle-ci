@@ -14,4 +14,24 @@ public class AddingTest {
 
         assertThat(actualSum, is(equalTo(expectedSum)));
     }
+
+    @Test
+    void shouldCheckTheSumOfTwoNegativeNumbers(){
+        Adding adding = new Adding();
+
+        int expectedSum = adding.findSum(-2,-2);
+        int actualSum = -4;
+
+        assertThat(actualSum, is(equalTo(expectedSum)));
+    }
+
+    @Test
+    void shouldCheckTheSumOfZeroAndZero(){
+        Adding adding = new Adding();
+
+        int expectedSum = adding.findSum(0,0);
+        int actualSum = 1;
+
+        assertThat(actualSum, is(equalTo(expectedSum)));
+    }
 }
