@@ -15,6 +15,7 @@ dependencies {
     testImplementation group: 'org.hamcrest', name: 'hamcrest', version: '2.2'
 }
 
+
 test {
     useJUnitPlatform()
 }
