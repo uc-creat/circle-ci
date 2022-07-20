@@ -1,6 +1,5 @@
 version: 2.1
-orbs:
-  sonarcloud: sonarsource/sonarcloud@1.1.0
+
 jobs:
   build:
     docker:
@@ -11,6 +10,7 @@ jobs:
 
     steps:
       - checkout
+      - sonarcloud/scan
       - run: ./gradlew clean build
       - store_test_results:
           path: build/test-results
@@ -20,7 +20,6 @@ jobs:
       - store_artifacts:
           path: build/reports/jacoco
           destination: test_coverage
-      - sonarcloud/scan
 
 
   test:
@@ -30,6 +29,8 @@ jobs:
       - checkout
       - run: ./gradlew test
 
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.1.0
 
 workflows:
   build_and_test:
