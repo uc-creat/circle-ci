@@ -11,7 +11,11 @@ jobs:
     steps:
       - checkout
       - sonarcloud/scan
-      - run: ./gradlew clean build
+      - run:
+            ./gradlew clean build
+            name: Analyze on SonarCloud
+            command: gradle build sonarqube"
+
       - store_test_results:
           path: build/test-results
       - store_artifacts:
