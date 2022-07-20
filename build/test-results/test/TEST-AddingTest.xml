@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddingTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-19T18:17:26" hostname="Utkarshs-MacBook-Pro.local" time="0.03">
+<testsuite name="AddingTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-07-20T15:08:07" hostname="MSI_OF_SETHU" time="0.028">
   <properties/>
-  <testcase name="shouldCheckTheSumOfTwoPositiveNumbers()" classname="AddingTest" time="0.03"/>
+  <testcase name="shouldCheckTheSumOfTwoPositiveNumbers()" classname="AddingTest" time="0.027"/>
+  <testcase name="shouldCheckTheSumOfTwoNegativeNumbers()" classname="AddingTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
