@@ -10,7 +10,7 @@ public class AddingTest {
         Adding adding = new Adding();
 
         int expectedSum = adding.findSum(2,2);
-        int actualSum = 4;
+        int actualSum = 5;
 
         assertThat(actualSum, is(equalTo(expectedSum)));
     }
